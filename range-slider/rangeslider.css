@@ -1,0 +1,33 @@
+/**
+ * Author: Ajay Badgujar
+ * Website: https://www.ajaybadgujar.com/
+ * Youtube: https://www.youtube.com/channel/UCCnj0pD6f90B3ljdw98M7jA
+ */
+
+.range-slider{
+    position: relative;
+    height: 20px;
+}
+
+.range-slider .seekbar{
+    width:100%;
+    height: 10px;;
+    background-color: white;
+}
+
+.range-slider .handle{
+    position: absolute;
+    color:white;
+    width: 0px; 
+    height: 0px; 
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;    
+    border-bottom: 20px solid orange;
+    transform: translateX(-15px);
+    cursor: pointer;
+}
+
+.range-slider .handle .value{
+    transform: translateY(-30px);
+    text-align: center;
+}

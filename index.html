@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Multi Handle Range Slider</title>
+    <link href="range-slider/rangeslider.css" rel="stylesheet"/>
+    <style>
+        body{
+            background-color: darkcyan;
+        }
+        table{
+            width:200px;
+            margin:0px auto;
+            margin-top:200px;            
+        }
+
+        td{
+            height: 100px;            
+        }
+    </style>
+    <script type="module">
+        import  { RangeSlider } from './range-slider/rangeslider.class';
+
+        window.onload = ()=>{
+            var slider1 = new RangeSlider({
+                id:"slider1",
+                range: {min:0, max:200},
+                handles:[0],
+                width:300,
+                displayValue:true
+            });
+
+            var slider2 = new RangeSlider({
+                id:"slider2",
+                range: {min:100, max:250},
+                handles:[120, 220],
+                width:300,
+                displayValue:false
+            });
+
+            var slider3 = new RangeSlider({
+                id:"slider3",
+                range: {min:0, max:800},
+                handles:[50, 250, 800],
+                width:300,
+                displayValue:true
+            });
+        };
+
+    </script>
+
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <div id="slider1"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div id="slider2"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div id="slider3"></div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
